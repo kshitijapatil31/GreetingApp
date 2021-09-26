@@ -27,4 +27,9 @@ public class GreetingService {
 		
 		return greetingList.stream().filter(n->n.getId()==id).findFirst().get();
 	}
+
+	public List<Greeting> getAllreetings() {
+		
+		return greetingList;
+	}
 }
