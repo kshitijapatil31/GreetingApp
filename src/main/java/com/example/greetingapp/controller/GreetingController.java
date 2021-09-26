@@ -58,4 +58,10 @@ public class GreetingController {
 		
 		
 	}
+	@RequestMapping(method=RequestMethod.DELETE,value="/greeting/{id}")
+	public void deleteGretings(@PathVariable("id")long id) {
+		greetingService.deleteGreeting(id);
+		
+		
+	}
 }

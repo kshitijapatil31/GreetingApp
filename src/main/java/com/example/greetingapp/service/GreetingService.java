@@ -43,4 +43,9 @@ public class GreetingService {
 		}
 		
 	}
+
+	public void deleteGreeting(long id) {
+		greetingList.removeIf(n->n.getId()==id);
+		
+	}
 }
