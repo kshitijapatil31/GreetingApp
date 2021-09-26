@@ -22,4 +22,9 @@ public class GreetingService {
 	public void addGreeting(Greeting greeting) {
 		greetingList.add(greeting);
 	}
+
+	public Greeting findGreeting(long id) {
+		
+		return greetingList.stream().filter(n->n.getId()==id).findFirst().get();
+	}
 }
