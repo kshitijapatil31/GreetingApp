@@ -32,4 +32,15 @@ public class GreetingService {
 		
 		return greetingList;
 	}
+
+	public void editGreeting(Greeting greeting, long id) {
+		int i=0;
+		for(Greeting greetng1:greetingList) {
+			if(greetng1.getId()==(id)) {
+				greetingList.set(i, greeting);
+			}
+			i++;
+		}
+		
+	}
 }

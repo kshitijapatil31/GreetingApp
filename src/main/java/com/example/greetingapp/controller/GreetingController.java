@@ -51,4 +51,11 @@ public class GreetingController {
 	public List<Greeting> allGreetings(){
 		return greetingService.getAllreetings();
 	}
+	
+	@RequestMapping(method=RequestMethod.PUT,value="/greeting/{id}")
+	public void addGretings(@RequestBody Greeting greeting,@PathVariable("id")long id) {
+		greetingService.editGreeting(greeting,id);
+		
+		
+	}
 }
